@@ -10,6 +10,7 @@
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link href="https://fonts.googleapis.com/css?family=Rouge+Script|Satisfy" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
   <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -59,11 +60,27 @@
 
         </div>
     </nav>
-    <div id="containerBody" style="max-width:100%;">
-    
-    </div>
 
 </section>
+<i id="addTemplate" class="fa fa-2x fa-plus" aria-hidden="true" onclick="javascript:toggleSideBar();"></i>
+<div id="sideNav">
+	<div id="template1" draggable="true" ondragstart="drag(event)" style="background-image: url('assets/images/jumbotron.jpg'); position: relative;" class="templates mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow">
+		<div class="container">
+            <div class="row">
+                <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+
+                    <h1 class="mbr-section-title display-1">Dev's Magnet</h1>
+                    <p class="mbr-section-lead lead">Dev's Magnet is a web tool to easily create small/medium websites,landing pages,<br>promosites for apps,events &amp; products.It's also &nbsp;useful to generate webservice applications</p>
+                    <div class="mbr-section-btn">
+                        <a class="btn btn-lg btn-primary" href="UIG.html">UI GENERATOR</a> 
+                        <a class="btn btn-lg btn-primary" href="API.html">API GENERATOR</a></div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<div id="containerBody" ondrop="drop(event)" ondragover="allowDrop(event)" style="max-width:100%;">
+</div>
 
 
   <section class="engine"><a rel="external" href="https://mobirise.com">Mobirise Website Builder</a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>
@@ -78,6 +95,8 @@
   
   
   <input name="animation" type="hidden">
-  
+  <script>
+	initialize();
+  </script>
   </body>
 </html>

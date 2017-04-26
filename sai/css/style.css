@@ -1,3 +1,6 @@
+body {
+	background-color: #ccc;
+}
 h1.mbr-section-title.display-1 {
     font-family: 'Rouge Script', cursive;
 }
@@ -16,8 +19,69 @@ div.icons .fa {
     height: 4rem;
 }
 #containerBody {
-    height: 700px;
-    background-color: red;
+    background-color: #222;
     margin-left: auto;
     margin-right: auto;
+}
+#addTemplate {
+	position: fixed;
+	right: 1%;
+	bottom: 2%;
+	border-radius: 50%;
+	padding: 8px 11px;
+	cursor: pointer;
+	background-color: #fff;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	z-index: 1;
+}
+#addTemplate:hover{
+	background-color: #000;
+	color: #fff;
+}
+#addTemplate.active{
+	right: 320px;
+}
+.templates {
+	height: auto;
+}
+#sideNav {
+	width: 0px;
+	position: fixed;
+	padding-top: 64px;
+	background-color: rgba(0,0,0,0.6);
+	right: 0;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	z-index: 1;
+}
+#sideNav.active {
+	width: 300px;
+}
+#sideNav .display-1 {
+	font-size: 2rem;
+}
+#sideNav .mbr-section-hero .mbr-section-lead {
+	font-size: 0.5rem;
+}
+#sideNav .btn-lg {
+    padding: 0.35rem 1.0rem;
+    font-size: 0.3rem;
+}
+#sideNav .mbr-section {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
 }
