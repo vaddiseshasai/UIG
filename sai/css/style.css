@@ -22,6 +22,7 @@ div.icons .fa {
     background-color: #222;
     margin-left: auto;
     margin-right: auto;
+	margin-top: 64px;
 }
 #addTemplate {
 	position: fixed;
@@ -49,10 +50,21 @@ div.icons .fa {
 .templates {
 	height: auto;
 }
+.templates.active {
+	border: 3px solid blue;
+}
+.templateEditIcons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+.hide {
+	display: none;
+}
 #sideNav {
 	width: 0px;
 	position: fixed;
-	padding-top: 64px;
 	background-color: rgba(0,0,0,0.6);
 	right: 0;
 	-webkit-transition: all 0.3s ease;
