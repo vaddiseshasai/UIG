@@ -58,6 +58,30 @@ div.icons .fa {
 	top: 0;
 	right: 0;
 	z-index: 1;
+	background-color: #fff;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.templateIcons {
+	padding: 8px 10px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.navbar-brand.fright{
+	z-index: 2001;
+}
+.templateIcons:hover {
+	color: #fff;
+	background-color: #000;
+}
+.fright {
+	float:right !important;
+}
+.fleft{
+	float: left !important;
 }
 .hide {
 	display: none;
