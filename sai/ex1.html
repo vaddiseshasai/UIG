@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset=utf-8 />
+<title>A Basic Drag & Drop Demo</title>
+<style>
+#drop {
+  min-height: 150px;
+  width: 250px;
+  border: 1px solid blue;
+  margin: 10px;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+  <h1 align=center>A Basic Drag & Drop Demo</h1>
+  <a href="http://www.robgravelle.com" id="text" draggable="true">This is a draggable item</a>
+  <img id="ball" alt="ball (2K)" src="ball.gif" height="50" width="50" />
+  <div id="drop"></div>
+  <script>
+  var drop = document.getElementById('drop');
+ 
+  function cancel(e) {
+    if (e.preventDefault) e.preventDefault();
+    return false;
+  }
+
+  //Tells the browser that we can drop on this target
+  addEvent(drop, 'dragover', cancel);  //DOM event
+  addEvent(drop, 'dragenter', cancel); //IE event
+  
+  var addEvent = (function () {
+  if (document.addEventListener) {
+    return function (el, type, fn) {
+      if (el && el.nodeName || el === window) {
+        el.addEventListener(type, fn, false);
+      } else if (el && el.length) {
+        for (var i = 0; i < el.length; i++) {
+          addEvent(el[i], type, fn);
+        }
+      }
+    };
+  } else {
+    return function (el, type, fn) {
+      if (el && el.nodeName || el === window) {
+        el.attachEvent('on' + type, function () { return fn.call(el, window.event); });
+      } else if (el && el.length) {
+        for (var i = 0; i < el.length; i++) {
+          addEvent(el[i], type, fn);
+        }
+      }
+    };
+  }
+})();
+addEvent(drop, 'drop', function (e) {
+    if (e.preventDefault) e.preventDefault(); // stops the browser from redirecting off to the text.
+    this.innerHTML = "<strong>Done!</strong>";
+    this.style.backgroundColor="#CCCC00";
+
+    return false;
+  });
+  </script>
+</body>
+</html>
